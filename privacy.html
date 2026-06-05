@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="effective">Effective date: April 9, 2026</p>
+  <p class="effective">Effective date: June 5, 2026</p>
 
   <p>Garbeau ("the App") is a waste collection schedule app for municipalities in Quebec, Canada. This policy describes what data the App collects, how it is used, and your choices.</p>
 
@@ -24,14 +24,21 @@
   <h3>Location Data</h3>
   <ul>
     <li>The App may request access to your device's GPS to help identify your municipality and collection zone.</li>
-    <li>Location coordinates are stored <strong>only on your device</strong> and are <strong>never transmitted</strong> to any server.</li>
-    <li>Location access is optional. You can deny permission and select your city and zone manually.</li>
+    <li>Location coordinates are stored on your device and are used locally to determine your zone. Location access is optional — you can deny permission and select your city and zone manually.</li>
+    <li>When you use the address lookup feature, civic number, borough, and postal code may be transmitted to a municipal or third-party geocoding API (such as the City of Montréal or City of Laval open data endpoints) solely to resolve your collection zone. This data is not stored by us.</li>
+    <li>Platform geocoding and reverse-geocoding (via device OS services) may involve Apple or Google geocoding providers according to their own privacy policies.</li>
   </ul>
 
-  <h3>App Preferences</h3>
+  <h3>App Preferences (Local)</h3>
   <ul>
-    <li>Your selected city, zone, and notification settings are stored locally on your device using standard device storage.</li>
-    <li>This data is <strong>never transmitted</strong> to any server.</li>
+    <li>Your selected city, zone, and general display settings are stored locally on your device using standard device storage.</li>
+  </ul>
+
+  <h3>Push Notification Data (Server-Side)</h3>
+  <ul>
+    <li>If you enable push notifications, the App obtains an Expo push token from your device and sends it — along with your selected city, zone, reminder lead times, muted collection types, and language preference — to our backend (hosted on <a href="https://supabase.com">Supabase</a>).</li>
+    <li>This data is used exclusively to deliver collection-day reminders to your device. It is not used for marketing or profiling.</li>
+    <li>You can disable push notifications at any time in the App's settings, which stops future transmissions.</li>
   </ul>
 
   <h3>Crash Reports</h3>
@@ -40,48 +47,67 @@
     <li>Crash reports do <strong>not</strong> contain your location, city selection, personal information, or any data that can identify you.</li>
   </ul>
 
-  <h2>2. Information We Do Not Collect</h2>
+  <h2>2. Advertising</h2>
+  <ul>
+    <li>The App may display banner advertisements served by <a href="https://admob.google.com">Google AdMob</a>.</li>
+    <li>Ads are served as non-personalized by default. AdMob may collect and use the Android Advertising ID (AD_ID) or equivalent platform identifier in accordance with <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    <li>Pro subscribers (if applicable) may not see advertisements.</li>
+  </ul>
+
+  <h2>3. Information We Do Not Collect</h2>
   <p>The App does <strong>not</strong>:</p>
   <ul>
     <li>Require or support user accounts, logins, or registration</li>
     <li>Collect names, email addresses, phone numbers, or other personal identifiers</li>
-    <li>Use analytics, advertising, or tracking SDKs</li>
-    <li>Transmit your location to any server</li>
-    <li>Share or sell any data to third parties</li>
+    <li>Use analytics or behavioural tracking SDKs</li>
+    <li>Share or sell your personal data to third parties</li>
   </ul>
 
-  <h2>3. Local Notifications</h2>
+  <h2>4. Push Notifications</h2>
   <ul>
-    <li>The App can schedule local reminders for upcoming collection days.</li>
-    <li>Notifications are generated entirely on your device. No push notification tokens are sent to any server.</li>
-    <li>You can enable or disable notifications at any time in the App's settings.</li>
+    <li>When push notifications are enabled, your Expo push token and notification preferences (city, zone, reminder hours, muted types, language) are stored on our Supabase backend to allow server-initiated reminders.</li>
+    <li>You can enable or disable push notifications at any time in the App's settings. Disabling notifications does not automatically delete existing server records; see Section 8 for deletion options.</li>
   </ul>
 
-  <h2>4. Schedule Data</h2>
+  <h2>5. Schedule Data</h2>
   <ul>
     <li>Collection schedules are bundled with the App. For select municipalities, the App may fetch updated schedule data from a public GitHub repository.</li>
     <li>These requests are anonymous and do not transmit any user data.</li>
   </ul>
 
-  <h2>5. Issue Reporting</h2>
+  <h2>6. Issue Reporting</h2>
   <ul>
     <li>The App includes a feature to report incorrect collection dates. This opens your device's email client with a pre-filled message.</li>
     <li>You are in full control of whether to send the email and what information it contains.</li>
   </ul>
 
-  <h2>6. Data Storage and Security</h2>
+  <h2>7. Third-Party Services</h2>
+  <p>The App uses the following third-party services, each governed by its own privacy policy:</p>
   <ul>
-    <li>All user preferences and cached data are stored locally on your device.</li>
-    <li>You can clear all stored data at any time using the "Reset All Data" option in Settings, or by uninstalling the App.</li>
+    <li><strong>Supabase</strong> — backend database for push notification tokens and preferences (<a href="https://supabase.com/privacy">Privacy Policy</a>)</li>
+    <li><strong>Expo Push Service</strong> — delivery of push notifications to your device (<a href="https://expo.dev/privacy">Privacy Policy</a>)</li>
+    <li><strong>Sentry</strong> — crash and error reporting (<a href="https://sentry.io/privacy/">Privacy Policy</a>)</li>
+    <li><strong>RevenueCat</strong> — subscription and purchase management (<a href="https://www.revenuecat.com/privacy">Privacy Policy</a>)</li>
+    <li><strong>Google AdMob</strong> — in-app advertising (<a href="https://policies.google.com/privacy">Privacy Policy</a>)</li>
+    <li><strong>City of Montréal / City of Laval open data APIs</strong> — address and zone resolution; requests are not stored by us</li>
+    <li><strong>Apple / Google geocoding providers</strong> — platform-level geocoding via device OS, subject to Apple and Google privacy policies</li>
   </ul>
 
-  <h2>7. Children's Privacy</h2>
+  <h2>8. Data Storage, Retention, and Deletion</h2>
+  <ul>
+    <li>Local preferences and cached data are stored on your device. You can clear them at any time using the "Reset All Data" option in Settings, or by uninstalling the App.</li>
+    <li>Server-side push notification records (token, preferences) are retained while you have notifications enabled. To request deletion of your server-side data, contact us at <a href="mailto:info@garbeau.ca">info@garbeau.ca</a>.</li>
+    <li>Crash report data retained by Sentry is subject to Sentry's own retention policy.</li>
+    <li>RevenueCat transaction records are retained as required by Apple App Store / Google Play Store requirements.</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
   <p>The App does not knowingly collect any personal information from anyone, including children under 13.</p>
 
-  <h2>8. Changes to This Policy</h2>
+  <h2>10. Changes to This Policy</h2>
   <p>If this policy is updated, the revised version will be posted at this URL with an updated effective date.</p>
 
-  <h2>9. Contact</h2>
+  <h2>11. Contact</h2>
   <p>For questions about this privacy policy, contact us at <a href="mailto:info@garbeau.ca">info@garbeau.ca</a>.</p>
 </body>
 </html>
