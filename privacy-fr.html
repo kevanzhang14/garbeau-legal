@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garbeau — Politique de confidentialité</title>
+  <title>Garbeau - Politique de confidentialité</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; line-height: 1.6; }
     h1 { color: #2E7D32; }
@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Politique de confidentialité</h1>
-  <p class="effective">Date d'entrée en vigueur : 5 juin 2026</p>
+  <p class="effective">Date d'entrée en vigueur : 22 juin 2026</p>
 
   <p>Garbeau (« l'Application ») est une application d'horaires de collecte des matières résiduelles pour les municipalités du Québec, Canada. Cette politique décrit les données que l'Application recueille, comment elles sont utilisées et vos choix.</p>
 
@@ -23,91 +23,86 @@
 
   <h3>Données de localisation</h3>
   <ul>
-    <li>L'Application peut demander l'accès au GPS de votre appareil pour identifier votre municipalité et votre zone de collecte.</li>
-    <li>Les coordonnées de localisation sont stockées sur votre appareil et utilisées localement pour déterminer votre zone. L'accès à la localisation est facultatif — vous pouvez refuser la permission et sélectionner votre ville et votre zone manuellement.</li>
-    <li>Lorsque vous utilisez la fonction de recherche d'adresse, le numéro civique, l'arrondissement et le code postal peuvent être transmis à une API municipale ou tierce de géocodage (telle que les endpoints de données ouvertes de la Ville de Montréal ou de la Ville de Laval) uniquement pour identifier votre zone de collecte. Ces données ne sont pas conservées par nous.</li>
-    <li>Le géocodage et le géocodage inversé effectués par la plateforme (via les services du système d'exploitation) peuvent impliquer les fournisseurs de géocodage d'Apple ou de Google conformément à leurs propres politiques de confidentialité.</li>
+    <li>L'Application peut demander l'accès au GPS de votre appareil pour identifier votre municipalite et votre zone de collecte.</li>
+    <li>Les coordonnées de localisation sont stockées <strong>uniquement sur votre appareil</strong> et ne sont <strong>jamais transmises</strong> a un serveur.</li>
+    <li>L'accès a la localisation est facultatif. Vous pouvez refuser la permission et sélectionner votre ville et votre zone manuellement.</li>
   </ul>
 
-  <h3>Préférences de l'application (locales)</h3>
+  <h3>Préférences de l'application</h3>
   <ul>
-    <li>Votre ville, zone et paramètres d'affichage généraux sélectionnés sont stockés localement sur votre appareil à l'aide du stockage standard de l'appareil.</li>
+    <li>Votre ville, zone, preference de langue et paramètres de notifications selectionnes sont stockes localement sur votre appareil a l'aide du stockage standard de l'appareil.</li>
+    <li>Ces données ne sont <strong>jamais transmises</strong> a un serveur, sauf tel que décrit dans la section Notifications push ci-dessous.</li>
   </ul>
 
-  <h3>Données de notifications push (côté serveur)</h3>
+  <h3>Jetons de notification push</h3>
   <ul>
-    <li>Si vous activez les notifications push, l'Application obtient un jeton Expo push de votre appareil et l'envoie — avec votre ville, zone, délais de rappel, types de collecte désactivés et langue sélectionnés — à notre serveur (hébergé sur <a href="https://supabase.com">Supabase</a>).</li>
-    <li>Ces données sont utilisées exclusivement pour vous envoyer des rappels les jours de collecte. Elles ne sont pas utilisées à des fins de marketing ou de profilage.</li>
-    <li>Vous pouvez désactiver les notifications push à tout moment dans les paramètres de l'Application, ce qui arrête les futures transmissions.</li>
+    <li>Si vous activez les rappels de collecte, l'Application enregistre un jeton de notification push auprès du service push d'Expo et transmet ce jeton a notre serveur (Supabase) avec votre ville, zone, heures de rappel, types de collecte masqués et preference de langue.</li>
+    <li>Ces informations sont utilisées uniquement pour vous envoyer des rappels de jour de collecte aux heures que vous avez choisies.</li>
+    <li>Le jeton push ne révèle <strong>pas</strong> votre identité, votre nom, votre courriel ou votre emplacement précis.</li>
+    <li>Vous pouvez désactiver les rappels a tout moment dans les paramètres de l'Application. Cela supprime votre jeton push de notre serveur.</li>
   </ul>
 
   <h3>Rapports de plantage</h3>
   <ul>
-    <li>Si l'Application rencontre une erreur en production, des données anonymes de plantage (message d'erreur, trace de la pile, version de l'application) peuvent être envoyées à <a href="https://sentry.io">Sentry</a>, un service tiers de surveillance des erreurs.</li>
-    <li>Les rapports de plantage ne contiennent <strong>pas</strong> votre localisation, votre sélection de ville, vos informations personnelles ou toute donnée permettant de vous identifier.</li>
+    <li>Si l'Application rencontre une erreur en production, des données anonymes de plantage (message d'erreur, trace de la pile, version de l'application) peuvent etre envoyées a <a href="https://sentry.io">Sentry</a>, un service tiers de surveillance des erreurs.</li>
+    <li>Les rapports de plantage ne contiennent <strong>pas</strong> votre localisation, votre selection de ville, vos informations personnelles ou toute donnee permettant de vous identifier.</li>
   </ul>
 
-  <h2>2. Publicité</h2>
-  <ul>
-    <li>L'Application peut afficher des bannières publicitaires diffusées par <a href="https://admob.google.com">Google AdMob</a>.</li>
-    <li>Les publicités sont diffusées sans personnalisation par défaut. AdMob peut collecter et utiliser l'identifiant publicitaire Android (AD_ID) ou l'identifiant de plateforme équivalent conformément à la <a href="https://policies.google.com/privacy">Politique de confidentialité de Google</a>.</li>
-    <li>Les abonnés Pro (le cas échéant) peuvent ne pas voir de publicités.</li>
-  </ul>
-
-  <h2>3. Informations que nous ne recueillons pas</h2>
+  <h2>2. Informations que nous ne recueillons pas</h2>
   <p>L'Application ne fait <strong>pas</strong> ce qui suit :</p>
   <ul>
     <li>Exiger ou prendre en charge des comptes utilisateurs, des identifiants ou des inscriptions</li>
-    <li>Recueillir des noms, adresses courriel, numéros de téléphone ou autres identifiants personnels</li>
-    <li>Utiliser des outils d'analyse ou de suivi comportemental</li>
-    <li>Partager ou vendre vos données personnelles à des tiers</li>
+    <li>Recueillir des noms, adresses courriel, numeros de téléphone ou autres identifiants personnels</li>
+    <li>Partager ou vendre des données a des tiers</li>
   </ul>
 
-  <h2>4. Notifications push</h2>
+  <h2>3. Publicité</h2>
   <ul>
-    <li>Lorsque les notifications push sont activées, votre jeton Expo push et vos préférences de notification (ville, zone, heures de rappel, types désactivés, langue) sont stockés sur notre serveur Supabase pour permettre les rappels initiés par le serveur.</li>
-    <li>Vous pouvez activer ou désactiver les notifications push à tout moment dans les paramètres de l'Application. La désactivation des notifications ne supprime pas automatiquement les enregistrements existants côté serveur ; consultez la Section 8 pour les options de suppression.</li>
+    <li>L'Application affiche des bannières publicitaires diffusées par Google AdMob.</li>
+    <li>AdMob peut utiliser l'identifiant publicitaire de votre appareil pour diffuser des publicites pertinentes et mesurer leur performance. Aucune information personnelle (nom, courriel, localisation) n'est partagée avec les annonceurs.</li>
+    <li>Vous pouvez contrôler la personnalisation des publicites via les paramètres de confidentialité de votre appareil (Réglages > Confidentialite > Publicité sur iOS; Paramètres > Google > Publicités sur Android).</li>
   </ul>
 
-  <h2>5. Données d'horaires</h2>
+  <h2>4. Dons</h2>
   <ul>
-    <li>Les horaires de collecte sont inclus dans l'Application. Pour certaines municipalités, l'Application peut récupérer des données d'horaires mises à jour depuis un dépôt GitHub public.</li>
-    <li>Ces requêtes sont anonymes et ne transmettent aucune donnée utilisateur.</li>
+    <li>L'Application propose des dons optionnels via RevenueCat, une plateforme tierce de gestion d'abonnements et de paiements.</li>
+    <li>Les transactions de don sont traitées par l'App Store d'Apple ou le Google Play Store. Garbeau ne recueille <strong>pas</strong> et ne stocke pas vos informations de paiement.</li>
+    <li>RevenueCat reçoit un identifiant d'utilisateur anonyme pour gérerr l'état de votre don. Cet identifiant n'est <strong>pas</strong> lié a votre identité.</li>
   </ul>
 
-  <h2>6. Signalement de problèmes</h2>
+  <h2>5. Notifications</h2>
   <ul>
-    <li>L'Application inclut une fonctionnalité pour signaler des dates de collecte incorrectes. Cela ouvre le client courriel de votre appareil avec un message pré-rempli.</li>
+    <li>L'Application peut vous envoyer des rappels pour les prochains jours de collecte.</li>
+    <li>Les rappels sont livrés via des notifications push distantes en utilisant le service de notification push d'Expo. Votre jeton push et vos preferences de notification (ville, zone, heures de rappel, types de collecte masqués, langue) sont stockes sur notre serveur (Supabase) pour planifier ces rappels.</li>
+    <li>Vous pouvez activer ou désactiver les notifications a tout moment dans les paramètres de l'Application. Désactiver les notifications supprime votre jeton push de notre serveur.</li>
+  </ul>
+
+  <h2>6. Données d'horaires</h2>
+  <ul>
+    <li>Les horaires de collecte sont inclus dans l'Application. Pour certaines municipalites, l'Application peut récupérer des données d'horaires mises a jour depuis un dépôt GitHub public.</li>
+    <li>Ces requêtes sont anonymes et ne transmettent aucune donnee utilisateur.</li>
+  </ul>
+
+  <h2>7. Signalement de problèmes</h2>
+  <ul>
+    <li>L'Application inclut une fonctionnalité pour signaler des dates de collecte incorrectes. Cela ouvre le cliént courriel de votre appareil avec un message pre-rempli.</li>
     <li>Vous avez le plein contrôle de l'envoi du courriel et des informations qu'il contient.</li>
   </ul>
 
-  <h2>7. Services tiers</h2>
-  <p>L'Application utilise les services tiers suivants, chacun régi par sa propre politique de confidentialité :</p>
+  <h2>8. Stockage des données et sécurité</h2>
   <ul>
-    <li><strong>Supabase</strong> — base de données serveur pour les jetons push et les préférences (<a href="https://supabase.com/privacy">Politique de confidentialité</a>)</li>
-    <li><strong>Expo Push Service</strong> — envoi de notifications push à votre appareil (<a href="https://expo.dev/privacy">Politique de confidentialité</a>)</li>
-    <li><strong>Sentry</strong> — signalement des plantages et erreurs (<a href="https://sentry.io/privacy/">Politique de confidentialité</a>)</li>
-    <li><strong>RevenueCat</strong> — gestion des abonnements et des achats (<a href="https://www.revenuecat.com/privacy">Politique de confidentialité</a>)</li>
-    <li><strong>Google AdMob</strong> — publicité intégrée à l'application (<a href="https://policies.google.com/privacy">Politique de confidentialité</a>)</li>
-    <li><strong>API de données ouvertes de la Ville de Montréal / Ville de Laval</strong> — résolution d'adresse et de zone ; les requêtes ne sont pas conservées par nous</li>
-    <li><strong>Fournisseurs de géocodage Apple / Google</strong> — géocodage au niveau de la plateforme via le système d'exploitation de l'appareil, soumis aux politiques de confidentialité d'Apple et de Google</li>
-  </ul>
-
-  <h2>8. Stockage, conservation et suppression des données</h2>
-  <ul>
-    <li>Les préférences locales et les données en cache sont stockées sur votre appareil. Vous pouvez les effacer à tout moment en utilisant l'option « Réinitialiser toutes les données » dans les Paramètres, ou en désinstallant l'Application.</li>
-    <li>Les enregistrements de notifications push côté serveur (jeton, préférences) sont conservés tant que vous avez les notifications activées. Pour demander la suppression de vos données côté serveur, contactez-nous à <a href="mailto:info@garbeau.ca">info@garbeau.ca</a>.</li>
-    <li>Les données de rapports de plantage conservées par Sentry sont soumises à leur propre politique de conservation.</li>
-    <li>Les enregistrements de transactions RevenueCat sont conservés conformément aux exigences de l'App Store d'Apple et du Google Play Store.</li>
+    <li>Toutes les preferences et données en cache sont stockées localement sur votre appareil.</li>
+    <li>Les jetons de notification push et les preferences associées sont stockes sur notre serveur (Supabase) et sont supprimés lorsque vous désactivez les notifications.</li>
+    <li>Vous pouvez effacer toutes les données stockées localement a tout moment en utilisant l'option « Réinitialiser toutes les données » dans les Paramètres, ou en désinstallant l'Application.</li>
   </ul>
 
   <h2>9. Vie privée des enfants</h2>
   <p>L'Application ne recueille sciemment aucune information personnelle de quiconque, y compris les enfants de moins de 13 ans.</p>
 
   <h2>10. Modifications de cette politique</h2>
-  <p>Si cette politique est mise à jour, la version révisée sera publiée à cette adresse avec une date d'entrée en vigueur mise à jour.</p>
+  <p>Si cette politique est mise a jour, la version révisée sera publiée a cette adresse avec une date d'entrée en vigueur mise a jour.</p>
 
   <h2>11. Contact</h2>
-  <p>Pour toute question concernant cette politique de confidentialité, contactez-nous à <a href="mailto:info@garbeau.ca">info@garbeau.ca</a>.</p>
+  <p>Pour toute question concernant cette politique de confidentialité, contactez-nous a <a href="mailto:info@garbeau.ca">info@garbeau.ca</a>.</p>
 </body>
 </html>
